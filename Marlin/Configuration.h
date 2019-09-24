@@ -387,7 +387,7 @@
 
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 255     // Limits current to nozzle while in bang-bang mode; 255=full current
+#define BANG_MAX 120     // Limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 #if ENABLED(PIDTEMP)
@@ -673,7 +673,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 1000 }
+#define DEFAULT_MAX_ACCELERATION      { 750, 750, 100, 750 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -684,9 +684,9 @@
  *   M204 T    Travel Acceleration
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_ACCELERATION          800    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   800    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   600    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -697,8 +697,8 @@
  * value set here, it may happen instantaneously.
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_XJERK                  8.0
-#define DEFAULT_YJERK                  8.0
+#define DEFAULT_XJERK                  6.0
+#define DEFAULT_YJERK                  6.0
 #define DEFAULT_ZJERK                  0.4
 #define DEFAULT_EJERK                  1.0
 
@@ -1260,8 +1260,8 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY 6000 // @advi3++
-#define HOMING_FEEDRATE_Z  1200 // @advi3++
+#define HOMING_FEEDRATE_XY 4000 // @advi3++
+#define HOMING_FEEDRATE_Z  1000 // @advi3++
 
 // @section calibrate
 

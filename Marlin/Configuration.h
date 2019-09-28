@@ -488,7 +488,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 170
+#define EXTRUDE_MINTEMP 175
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -656,7 +656,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // @advi3++: Set the default values for Wanhao i3 Plus. Note: 81 is wrong (as set by Wanhao in their own firmwares)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93.0 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140.0 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -664,7 +664,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_MAX_FEEDRATE          { 450, 450, 20, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 450, 450, 20, 30 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -673,7 +673,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_MAX_ACCELERATION      { 750, 750, 100, 750 }
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 1000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -684,9 +684,9 @@
  *   M204 T    Travel Acceleration
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   600    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -697,10 +697,10 @@
  * value set here, it may happen instantaneously.
  */
 // @advi3++: Set resonable default values for Wanhao i3 Plus
-#define DEFAULT_XJERK                  6.0
-#define DEFAULT_YJERK                  6.0
-#define DEFAULT_ZJERK                  0.4
-#define DEFAULT_EJERK                  1.0
+#define DEFAULT_XJERK                  10.0
+#define DEFAULT_YJERK                  10.0
+#define DEFAULT_ZJERK                  0.5
+#define DEFAULT_EJERK                  1.5
 
 /**
  * S-Curve Acceleration
@@ -1260,7 +1260,7 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY 4000 // @advi3++
+#define HOMING_FEEDRATE_XY 2500 // @advi3++
 #define HOMING_FEEDRATE_Z  1000 // @advi3++
 
 // @section calibrate
